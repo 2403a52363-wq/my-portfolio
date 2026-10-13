@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>L. Manikanta | AI &amp; ML Student, SR University</title>
+  <meta name="description" content="Portfolio of L. Manikanta, a third-year CSE (AI &amp; ML) student at SR University building medical AI and IoT healthcare systems.">
+  <meta name="theme-color" content="#EDF1F5">
+  <meta property="og:title" content="L. Manikanta | AI &amp; ML Student">
+  <meta property="og:description" content="Medical AI that shows its work: LungAI and AyuLink.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap bar">
+      <a class="brand" href="#top" aria-label="L. Manikanta, back to top">L. Manikanta</a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#toolkit">Toolkit</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <canvas id="heat" aria-hidden="true"></canvas>
+      <div class="wrap hero-inner">
+        <p class="hero-kicker">Third-year CSE (AI &amp; ML), SR University</p>
+        <h1>L. Manikanta</h1>
+        <p class="hero-lead">I build medical AI that shows its work: models that don't just give an answer, they point to where they looked.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">See my projects</a>
+          <a class="btn btn-ghost" href="mailto:manirdy1609@gmail.com">Email me</a>
+        </div>
+      </div>
+      <p class="hero-hint wrap">Move your cursor over the grid. It reads like the activation map a model draws over an X-ray.</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap split">
+        <h2>About</h2>
+        <div class="prose">
+          <p>I'm a third-year B.Tech student in Computer Science and Engineering (AI &amp; ML) at SR University, Warangal.</p>
+          <p>My work so far sits where machine learning meets healthcare: a deep-learning system that explains its chest X-ray readings in 3D, and an IoT platform that lets families and doctors monitor elderly patients remotely over long-range LoRa radio.</p>
+          <p>I like projects that go all the way through: the model, the interface a clinician would actually use, and the written paper that explains it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section section-tint" id="projects">
+      <div class="wrap">
+        <h2>Projects</h2>
+
+        <article class="project">
+          <div class="project-main">
+            <h3>LungAI</h3>
+            <p class="project-sub">Chest X-ray diagnosis with a 3D explainability layer</p>
+            <p>A deep-learning system that reads chest X-rays and then shows its reasoning. Grad-CAM attention maps are projected onto an interactive 3D lung model, so a reader can see which region of the lung drove each prediction.</p>
+            <p>It ships as a full clinical-workstation web app, and the work is written up as an IEEE-format paper with 26 references. I led this capstone with one teammate.</p>
+          </div>
+          <aside class="project-side" aria-label="LungAI key facts">
+            <p class="metric"><span class="metric-num">0.8318</span><span class="metric-label">macro-averaged test AUROC, patient-wise split, 22,424 test images</span></p>
+            <dl class="facts">
+              <div><dt>Model</dt><dd>DenseNet-121 on NIH ChestX-ray14</dd></div>
+              <div><dt>Explainability</dt><dd>Grad-CAM mapped onto a 3D lung</dd></div>
+              <div><dt>Frontend</dt><dd>Next.js, React, React Three Fiber</dd></div>
+              <div><dt>Backend</dt><dd>FastAPI, SQLite</dd></div>
+            </dl>
+          </aside>
+        </article>
+
+        <article class="project">
+          <div class="project-main">
+            <h3>AyuLink</h3>
+            <p class="project-sub">Smart Health. Zero Boundaries.</p>
+            <p>A remote patient-monitoring system for rural elder care. Sensors on the patient send readings over LoRa to a gateway, and AI-assisted dashboards and alerts help families and doctors respond early.</p>
+            <p>Built for SR University's Pragathi 2.0 national-level project expo, with a live web dashboard.</p>
+            <p><a class="link" href="https://fight-club-ht-01.vercel.app/" target="_blank" rel="noopener">Open the live site</a></p>
+          </div>
+          <aside class="project-side" aria-label="AyuLink key facts">
+            <dl class="facts">
+              <div><dt>Connectivity</dt><dd>LoRa long-range radio</dd></div>
+              <div><dt>Hardware</dt><dd>IoT sensor nodes</dd></div>
+              <div><dt>Software</dt><dd>Next.js web dashboard, alerts</dd></div>
+              <div><dt>Setting</dt><dd>Rural elder care</dd></div>
+            </dl>
+          </aside>
+        </article>
+      </div>
+    </section>
+
+    <!-- TOOLKIT -->
+    <section class="section" id="toolkit">
+      <div class="wrap split">
+        <h2>Toolkit</h2>
+        <div>
+          <p class="prose-lead">What I've used in the projects above.</p>
+          <dl class="toolkit">
+            <div><dt>Machine learning</dt><dd>Deep learning, DenseNet-121, Grad-CAM, medical imaging, model evaluation (AUROC)</dd></div>
+            <div><dt>Web</dt><dd>Next.js, React, React Three Fiber, FastAPI, SQLite</dd></div>
+            <div><dt>IoT</dt><dd>LoRa, sensor nodes, remote monitoring and alerts</dd></div>
+            <div><dt>Communication</dt><dd>IEEE-format paper writing, project posters and expo presentations</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-ink" id="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p class="contact-lead">Open to internships, research collaborations and project work in AI for healthcare.</p>
+        <p class="contact-mail">
+          <a href="mailto:manirdy1609@gmail.com" id="mail">manirdy1609@gmail.com</a>
+        </p>
+        <div class="contact-actions">
+          <button class="btn btn-light" id="copy" type="button">Copy email</button>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/manikanta-reddy-93186135a" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="year">2026</span> L. Manikanta. Built by hand with HTML, CSS and JavaScript.</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
